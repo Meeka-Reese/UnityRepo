@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class BallMov : MonoBehaviour
 {
@@ -38,5 +40,15 @@ public class BallMov : MonoBehaviour
         
         
 
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("Paddle") || other.transform.CompareTag("Brick"))
+        {
+            _direction.y *= -1;
+            
+        }
+        
     }
 }

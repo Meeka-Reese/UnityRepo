@@ -8,7 +8,7 @@ public class PaddleMov : MonoBehaviour
 
     public KeyCode RightKey;
     public KeyCode LeftKey;
-    private float XLim = 5.8f;
+    private float XLim = 5.5f;
     
     // Start is called before the first frame update
     void Start()

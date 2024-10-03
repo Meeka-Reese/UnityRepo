@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class BallBehavior : MonoBehaviour
 {
-    public float Speed = 3.0f;
-    public float YLimit = 6.0f;
-    public float XLimit = 10.0f;
+    [SerializeField] float _speed = 3.0f;
+    [SerializeField] float _yLimit = 4.0f;
+    [SerializeField] float _xLimit = 10.0f;
 
     private Vector2 _direction;
+
     // Start is called before the first frame update
     void Start()
     {
         _direction = new Vector2(
             // condition ? passing : failing
-            Random.value > 0.5f ? 1 : -1, 
+            Random.value > 0.5f ? 1 : -1,
             Random.value > 0.5f ? 1 : -1
         );
     }
@@ -23,30 +24,44 @@ public class BallBehavior : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(
-            Speed * _direction.x,
-            Speed * _direction.y
-            ) * Time.deltaTime;
-        if (Mathf.Abs(transform.position.y) >= YLimit)
+            _speed * _direction.x,
+            _speed * _direction.y
+        ) * Time.deltaTime;
+        if (Mathf.Abs(transform.position.y) >= _yLimit)
         {
             _direction.y *= -1;
         }
-        if (Mathf.Abs(transform.position.x) >= XLimit)
+
+        if (Mathf.Abs(transform.position.x) >= _xLimit)
         {
             ResetBall();
         }
+    }
 
-        void ResetBall()
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.transform.CompareTag("Paddle"))
         {
-            transform.position = Vector3.zero;
-            _direction = new Vector2(
-                // condition ? passing : failing
-                Random.value > 0.5f ? 1 : -1, 
-                Random.value > 0.5f ? 1 : -1
-            );
-            
+            _direction.x *= -1;
             
         }
         
+    }
+
+    void ResetBall()
+    {
+        transform.position = Vector3.zero;
+        _direction = new Vector2(
+            // condition ? passing : failing
+            Random.value > 0.5f ? 1 : -1,
+            Random.value > 0.5f ? 1 : -1
+        );
+
 
     }
 }
+        
+
+    
+
