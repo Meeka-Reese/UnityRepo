@@ -5,6 +5,10 @@ using UnityEngine;
 public class LoudnessMonitor : MonoBehaviour
 {
     public int SampleWindow;
+
+    public float SmoothVolume;
+
+    public float SmoothFactor = 0.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +18,7 @@ public class LoudnessMonitor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         
     }
     public float GetVolume(int clipPosition, AudioClip clip)
@@ -34,7 +39,9 @@ public class LoudnessMonitor : MonoBehaviour
         {
             volume += Mathf.Abs(waveData[i]);
         }
-        return volume / SampleWindow;
+        
+        SmoothVolume = Mathf.Lerp(SmoothVolume, volume, SmoothFactor);
+        return SmoothVolume / SampleWindow;
         
         
         

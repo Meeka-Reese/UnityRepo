@@ -15,10 +15,22 @@ public class PlayerBehavior : MonoBehaviour
 
     [SerializeField] float LoudnessMult = 1000f;
     [SerializeField] float Loudness;
+    private float yPos;
+    private float xPos;
+    [SerializeField] private float TelOffset;
+    public LoudnessMonitor LoudnessMonitor;
+    public PlatBehav _platBehav;
+    private AudioSource Source;
+    private float MoveSize;
+   
+    
     
     // Start is called before the first frame update
     void Start()
     {
+        Source = PlatBehav._source;
+        
+        
         
         
     }
@@ -27,6 +39,7 @@ public class PlayerBehavior : MonoBehaviour
     void Update()
     {
         Loudness = PlatBehav.Loudness;
+        MoveSize = _platBehav.MoveSize;
         
         if (Input.GetKeyDown(KeyCode.Space) && groundState == Utilities.GroundState.Ground)
         {
@@ -49,18 +62,29 @@ public class PlayerBehavior : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        
+
         if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("SoundPlat"))
         {
             groundState = Utilities.GroundState.Ground;
         }
 
-        if (other.gameObject.CompareTag("SoundPlat"))
+
+    }
+
+    private void OnCollisionStay2D(Collision2D other)
         {
-            Debug.Log(Loudness);
-            _rigidbody.AddForce(new Vector2(0, Loudness * LoudnessMult), ForceMode2D.Impulse);
+            if (other.gameObject.CompareTag("SoundPlat"))
+            {
+                Vector3 PMax = new Vector3(_platBehav.xMax, transform.position.y, transform.position.z);
+                Vector3 PLim = new Vector3(_platBehav.xLim, transform.position.y, transform.position.z);
+                transform.position = Vector3.Lerp(PLim, PMax, (Loudness)* MoveSize);
+               
+                Debug.Log(Loudness);
+               
+            
+            }
             
         }
 
     }
-}
+
