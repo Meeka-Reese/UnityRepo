@@ -22,6 +22,8 @@ public class PlayerBehavior : MonoBehaviour
     public PlatBehav _platBehav;
     private AudioSource Source;
     private float MoveSize;
+    
+    private float SpeedBoost;
    
     
     
@@ -30,9 +32,11 @@ public class PlayerBehavior : MonoBehaviour
     {
         Source = PlatBehav._source;
         
-        
-        
-        
+        SpeedBoost = 0f;
+
+
+
+
     }
 
     // Update is called once per frame
@@ -40,6 +44,8 @@ public class PlayerBehavior : MonoBehaviour
     {
         Loudness = PlatBehav.Loudness;
         MoveSize = _platBehav.MoveSize;
+        
+        
         
         if (Input.GetKeyDown(KeyCode.Space) && groundState == Utilities.GroundState.Ground)
         {
@@ -49,12 +55,13 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position += new Vector3(_runspeed * Time.deltaTime, 0, 0);
+            transform.position += new Vector3((_runspeed + SpeedBoost) * Time.deltaTime, 0, 0);
+            
             
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position += new Vector3(-_runspeed * Time.deltaTime, 0, 0);
+            transform.position += new Vector3((-_runspeed + -SpeedBoost) * Time.deltaTime, 0, 0);
             
         }
 
@@ -78,6 +85,7 @@ public class PlayerBehavior : MonoBehaviour
                 Vector3 PMax = new Vector3(_platBehav.xMax, transform.position.y, transform.position.z);
                 Vector3 PLim = new Vector3(_platBehav.xLim, transform.position.y, transform.position.z);
                 transform.position = Vector3.Lerp(PLim, PMax, (Loudness)* MoveSize);
+                SpeedBoost = 5 * Loudness;
                
                 Debug.Log(Loudness);
                
@@ -85,6 +93,22 @@ public class PlayerBehavior : MonoBehaviour
             }
             
         }
+
+    private void OnCollisionExit2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("SoundPlat"))
+        {
+            StartCoroutine(ExitDelay());
+        }
+        
+    }
+
+    IEnumerator ExitDelay()
+    {
+        yield return new WaitForSeconds(0.5f);
+        SpeedBoost = 0f;
+        
+    }
 
     }
 
