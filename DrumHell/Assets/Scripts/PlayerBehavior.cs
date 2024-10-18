@@ -22,6 +22,8 @@ public class PlayerBehavior : MonoBehaviour
     public PlatBehav _platBehav;
     private AudioSource Source;
     private float MoveSize;
+    public bool BallDead = false;
+    [SerializeField] float yLim = -20f;
     
     private float SpeedBoost;
    
@@ -44,6 +46,10 @@ public class PlayerBehavior : MonoBehaviour
     {
         Loudness = PlatBehav.Loudness;
         MoveSize = _platBehav.MoveSize;
+        if (transform.position.y < yLim)
+        {
+            BallDead = true;
+        }
         
         
         
@@ -55,13 +61,13 @@ public class PlayerBehavior : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.position += new Vector3((_runspeed + SpeedBoost) * Time.deltaTime, 0, 0);
+            transform.position += new Vector3((_runspeed ) * Time.deltaTime, 0, 0);
             
             
         }
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.position += new Vector3((-_runspeed + -SpeedBoost) * Time.deltaTime, 0, 0);
+            transform.position += new Vector3((-_runspeed) * Time.deltaTime, 0, 0);
             
         }
 

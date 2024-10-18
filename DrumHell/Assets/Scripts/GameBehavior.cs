@@ -14,6 +14,8 @@ public class GameBehavior : MonoBehaviour
     public float EndTime;
     public float HighScore = 0;
     [SerializeField] Player[] _players = new Player[1];
+    public PlayerBehavior PlayerBehavior;
+    public bool Loose = false;
     
    
     private void Awake()
@@ -40,6 +42,11 @@ public class GameBehavior : MonoBehaviour
 
     private void Update()
     {
+        Loose = PlayerBehavior.BallDead;
+        if (Loose == true)
+        {
+            SceneManager.LoadScene("Title");
+        }
         timer = clock.ElapsedTime;
         win = WinPlat.Win;
         if (win)

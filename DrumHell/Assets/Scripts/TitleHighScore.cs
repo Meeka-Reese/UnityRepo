@@ -9,6 +9,9 @@ public class TitleHighScore : MonoBehaviour
     [SerializeField] private TextMeshProUGUI CurrentHighScore;
     private float WinScore;
     public TitleSceneManager TitleSceneManager;
+   
+
+    
     //Next step assign high score time to variable in title scene manager and then use that to display the time in
     //this script.
 
@@ -22,6 +25,7 @@ public class TitleHighScore : MonoBehaviour
     
     void Update()
     {
+        
         int minutes = Mathf.FloorToInt(WinScore / 60.0f);
         int seconds =Mathf.FloorToInt(WinScore % 60.0f);
         CurrentHighScore.text = $"Your Best Time Is {minutes:00}:{seconds:00}";

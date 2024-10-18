@@ -9,19 +9,41 @@ public class SongSlowDown : MonoBehaviour
     [SerializeField] float PowerUpTime = 5f;
     private bool IsCoroutineRunning = false;
     public AudioSource _source;
+    private bool BadPowerupActive;
+    public BadPowerUp _badpowerup;
     // Start is called before the first frame update
     void Start()
     {
         _source = GetComponent<AudioSource>();
+        _source.pitch = 1;
 
         _powerup.PowerupActivated = false;
+        _badpowerup.BadPowerupActivated = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        BadPowerupActive = _badpowerup.BadPowerupActivated;
+        // _source.pitch = BadPowerupActive == true ? 2f : 1f;
+        if (BadPowerupActive == true)
+        {
+            _source.pitch = 2f;
+        }
+        else if (PowerupActive == true)
+        {
+            _source.pitch = .5f;
+        }
+        else
+        {
+            _source.pitch = 1f;
+        }
+        if (_badpowerup && !IsCoroutineRunning)
+        {
+            StartCoroutine(BadPowerUpTimer());
+        }
         PowerupActive = _powerup.PowerupActivated;
-        _source.pitch = PowerupActive == true ? .5f : 1f;
+        // _source.pitch = PowerupActive == true ? .5f : 1f;
         if (PowerupActive && !IsCoroutineRunning)
         {
             StartCoroutine(PowerUpTimer());
@@ -35,5 +57,18 @@ public class SongSlowDown : MonoBehaviour
         
         _powerup.PowerupActivated = false;
         Debug.Log("Waiting Done");
+        _source.pitch = 1;
+        PowerupActive = false;
+    }
+    IEnumerator BadPowerUpTimer()
+    {
+        IsCoroutineRunning = true;
+        Debug.Log("Waiting");
+        yield return new WaitForSeconds(PowerUpTime);
+        
+        _badpowerup.BadPowerupActivated = false;
+        Debug.Log("Waiting Done");
+        _source.pitch = 1;
+        BadPowerupActive = false;
     }
 }
