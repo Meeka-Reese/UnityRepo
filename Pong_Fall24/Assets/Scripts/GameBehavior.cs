@@ -13,6 +13,7 @@ public class GameBehavior : MonoBehaviour
     [SerializeField] Player[] _players = new Player[2];
     public Utilities.GameplayState State = Utilities.GameplayState.Play;
     [SerializeField] private TextMeshProUGUI _messages;
+    
 
     private void Awake()
     {

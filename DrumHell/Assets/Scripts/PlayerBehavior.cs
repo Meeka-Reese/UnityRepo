@@ -82,10 +82,12 @@ public class PlayerBehavior : MonoBehaviour
         {
             if (other.gameObject.CompareTag("SoundPlat"))
             {
-                Vector3 PMax = new Vector3(_platBehav.xMax, transform.position.y, transform.position.z);
-                Vector3 PLim = new Vector3(_platBehav.xLim, transform.position.y, transform.position.z);
-                transform.position = Vector3.Lerp(PLim, PMax, (Loudness)* MoveSize);
+                // Vector3 PMax = new Vector3(_platBehav.xMax, transform.position.y, transform.position.z);
+                // Vector3 PLim = new Vector3(_platBehav.xLim, transform.position.y, transform.position.z);
+                // transform.position = Vector3.Lerp(PLim, PMax, (Loudness)* MoveSize);
                 SpeedBoost = 5 * Loudness;
+                transform.SetParent(other.transform);
+                
                
                 Debug.Log(Loudness);
                
@@ -94,12 +96,15 @@ public class PlayerBehavior : MonoBehaviour
             
         }
 
+    
+
     private void OnCollisionExit2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("SoundPlat"))
         {
             StartCoroutine(ExitDelay());
         }
+        transform.SetParent(null);
         
     }
 
