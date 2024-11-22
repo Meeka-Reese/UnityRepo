@@ -11,21 +11,19 @@ public class DontDestroyGameObject : MonoBehaviour
         if (Instance != null && Instance != this)
         {
             //destroy duplicates
-            Destroy(this);
+            Destroy(gameObject);
         }
         else
         {
             //Runs first time around
             Instance = this;
+            DontDestroyOnLoad(gameObject);
             // Uncomment on level based games
             // DontDestroyOnLoad(gameObject);
         }
     }
     // Start is called before the first frame update
-    void Start()
-    {
-        DontDestroyOnLoad(gameObject);
-    }
+    
 
    
 }

@@ -52,22 +52,22 @@ public class SongSlowDown : MonoBehaviour
     IEnumerator PowerUpTimer()
     {
         IsCoroutineRunning = true;
-        Debug.Log("Waiting");
+        
         yield return new WaitForSeconds(PowerUpTime);
         
         _powerup.PowerupActivated = false;
-        Debug.Log("Waiting Done");
+        
         _source.pitch = 1;
         PowerupActive = false;
     }
     IEnumerator BadPowerUpTimer()
     {
         IsCoroutineRunning = true;
-        Debug.Log("Waiting");
+        
         yield return new WaitForSeconds(PowerUpTime);
         
         _badpowerup.BadPowerupActivated = false;
-        Debug.Log("Waiting Done");
+        
         _source.pitch = 1;
         BadPowerupActive = false;
     }

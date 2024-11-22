@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Ground
   - SoundPlat
+  - Slant
+  - Powerup
+  - Powerdown
+  - Home
+  - FinishPlat
+  - crusher
   layers:
   - Default
   - TransparentFX
@@ -40,6 +46,30 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: bgfar
+    uniqueID: 1045215121
+    locked: 0
+  - name: mountain
+    uniqueID: 1667577833
+    locked: 0
+  - name: glow
+    uniqueID: 2074253355
+    locked: 0
+  - name: lava
+    uniqueID: 4048597919
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: plat
+    uniqueID: 238909083
+    locked: 0
+  - name: powerup
+    uniqueID: 1565860137
+    locked: 0
+  - name: player
+    uniqueID: 3208660069
+    locked: 0
+  - name: grass
+    uniqueID: 1343724125
     locked: 0

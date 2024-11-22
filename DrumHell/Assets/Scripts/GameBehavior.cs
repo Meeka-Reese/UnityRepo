@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class GameBehavior : MonoBehaviour
@@ -16,10 +18,21 @@ public class GameBehavior : MonoBehaviour
     [SerializeField] Player[] _players = new Player[1];
     public PlayerBehavior PlayerBehavior;
     public bool Loose = false;
+    public Utilities.PauseState pauseState;
+    public bool play = true;
+    [SerializeField] private GameObject pauseButton;
+    
     
    
     private void Awake()
     {
+       pauseButton = GameObject.Find("PauseButton");
+       if (pauseButton == null)
+       {
+           Debug.LogError("PauseButton not found");
+       }
+       pauseButton.SetActive(false);
+        pauseState = Utilities.PauseState.Play;
         
         if (Instance != null && Instance != this)
         {
@@ -42,6 +55,29 @@ public class GameBehavior : MonoBehaviour
 
     private void Update()
     {
+        
+        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            
+            pauseState = pauseState == Utilities.PauseState.Pause ? Utilities.PauseState.Play : Utilities.PauseState.Pause;
+            if (pauseState == Utilities.PauseState.Pause)
+            {
+                Time.timeScale = 0;
+                play = false;
+                pauseButton.SetActive(true);
+            }
+            else if (pauseState == Utilities.PauseState.Play)
+            {
+                Time.timeScale = 1;
+                
+                play = true;
+                pauseButton.SetActive(false);
+                
+            }
+            Debug.Log(pauseState);
+        }
+        
         Loose = PlayerBehavior.BallDead;
         if (Loose == true)
         {
@@ -62,7 +98,7 @@ public class GameBehavior : MonoBehaviour
             }
             if (win)
             {
-                SceneManager.LoadScene("Title");
+                // SceneManager.LoadScene("Title");
             
             }
             

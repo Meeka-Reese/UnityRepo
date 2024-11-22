@@ -17,13 +17,22 @@ public class PlatBehav : MonoBehaviour
     private bool BadPowerupActive;
     [SerializeField] float PowerUpTime = 5f;
     private bool IsCoroutineRunning = false;
+    [SerializeField] private GameBehavior GameBehavior;
+    private bool play = true;
+    
     
 
     
     // Start is called before the first frame update
     void Start()
     {
+        
+        
         _source = GetComponent<AudioSource>();
+        if (GameBehavior == null)
+        {
+            GameBehavior = FindObjectOfType<GameBehavior>();
+        }
 
         _powerup.PowerupActivated = false;
         _source.pitch = 1;
@@ -33,6 +42,8 @@ public class PlatBehav : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        play = GameBehavior.Instance.play;
+        
         PowerupActive = _powerup.PowerupActivated;
         BadPowerupActive = _badpowerup.BadPowerupActivated;
         // _source.pitch = BadPowerupActive == true ? 2f : 1f;
@@ -54,32 +65,38 @@ public class PlatBehav : MonoBehaviour
             StartCoroutine(PowerUpTimer());
         }
         // Debug.Log(PowerupActive);
-        
-        
-        Vector3 Pmax = new Vector3(xMax, transform.position.y, transform.position.z);
-        Vector3 Plim = new Vector3(xLim, transform.position.y, transform.position.z);
-        Loudness = (LoudnessMonitor.GetVolume(_source.timeSamples, _source.clip)) * 10f;
-        transform.position = Vector3.Lerp(Plim, Pmax, (Loudness)* MoveSize);
+
+        if (play)
+        {
+            Vector3 Pmax = new Vector3(xMax, transform.position.y, transform.position.z);
+            Vector3 Plim = new Vector3(xLim, transform.position.y, transform.position.z);
+            Loudness = (LoudnessMonitor.GetVolume(_source.timeSamples, _source.clip)) * 10f;
+            transform.position = Vector3.Lerp(Plim, Pmax, (Loudness) * MoveSize);
+        }
+        else
+        {
+            // Debug.Log("Not playing anymore");
+        }
 
     }
     IEnumerator PowerUpTimer()
     {
         IsCoroutineRunning = true;
-        Debug.Log("Waiting");
+        
         yield return new WaitForSeconds(PowerUpTime);
         
         _powerup.PowerupActivated = false;
-        Debug.Log("Waiting Done");
+        
         _source.pitch = 1;
     }
     IEnumerator BadPowerUpTimer()
     {
         IsCoroutineRunning = true;
-        Debug.Log("Waiting");
+        
         yield return new WaitForSeconds(PowerUpTime);
         
         _badpowerup.BadPowerupActivated = false;
-        Debug.Log("Waiting Done");
+       
         _source.pitch = 1;
     }
 

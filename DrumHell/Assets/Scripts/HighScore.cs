@@ -5,37 +5,45 @@ using UnityEngine;
 
 public class HighScores : MonoBehaviour
 {
-    // [SerializeField] private float _duration;
     [SerializeField] private TextMeshProUGUI HighScore;
-    private float WinScore;
+    private float winScore; // Local variable for high score
     public GameBehavior GameBehavior;
-    
-
-    public float ElapsedTime
-    {
-        get => WinScore;
-        set
-        {
-            // WinScore = value;
-            // int minutes = Mathf.FloorToInt(WinScore / 60.0f);
-            // int seconds =Mathf.FloorToInt(WinScore % 60.0f);
-
-            
-        }
-    }
 
     private void Start()
     {
-        
         HighScore = GetComponent<TextMeshProUGUI>();
+         
+        UpdateHighScoreUI(); // Update the UI initially
     }
-    
-    void Update()
-    {
-        int minutes = Mathf.FloorToInt(WinScore / 60.0f);
-        int seconds =Mathf.FloorToInt(WinScore % 60.0f);
-        HighScore.text = $"Your Best Time Is {minutes:00}:{seconds:00}";
-        WinScore = GameBehavior.Instance.HighScore;
 
+    private void Update()
+    {
+        // Ensure GameBehavior instance exists
+        if (GameBehavior.Instance != null)
+        {
+            float currentScore = GameBehavior.Instance.HighScore;
+
+            // Update winScore only if the current score is higher than the previous winScore
+            if (currentScore > winScore)
+            {
+                winScore = currentScore; // Update winScore
+            }
+        }
+
+        UpdateHighScoreUI(); // Update the UI with the current winScore
+    }
+
+    // Update the high score display
+    private void UpdateHighScoreUI()
+    {
+        int minutes = Mathf.FloorToInt(winScore / 60.0f);
+        int seconds = Mathf.FloorToInt(winScore % 60.0f);
+        HighScore.text = $"Your Best Time Is {minutes:00}:{seconds:00}";
+    }
+
+    // Reset the high score manually
+    public void ResetHighScore()
+    {
+        UpdateHighScoreUI(); // Update the UI to reflect the reset
     }
 }

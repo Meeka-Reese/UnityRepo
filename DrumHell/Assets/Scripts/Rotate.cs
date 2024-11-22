@@ -19,6 +19,8 @@ public class Rotate : MonoBehaviour
     private Quaternion Pmin; 
     private bool BadPowerupActive;
     public BadPowerUp _badpowerup;
+    private GameBehavior GameBehavior;
+    private bool play = true;
     
 
     
@@ -29,11 +31,16 @@ public class Rotate : MonoBehaviour
         _source = GetComponent<AudioSource>();
         _powerup.PowerupActivated = false;
         _source.pitch = 1;
+        if (GameBehavior == null)
+        {
+            GameBehavior = FindObjectOfType<GameBehavior>();
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        play = GameBehavior.Instance.play;
         PowerupActive = _powerup.PowerupActivated;
         if (BadPowerupActive == true)
         {
@@ -52,13 +59,15 @@ public class Rotate : MonoBehaviour
             StartCoroutine(BadPowerUpTimer());
         }
         // Debug.Log(PowerupActive);
-        
-        
-        Quaternion Pmax = new Quaternion(transform.rotation.x, transform.rotation.y, rotMax, transform.rotation.w);
-        Quaternion Pmin = new Quaternion(transform.rotation.x, transform.rotation.y, rotLim, transform.rotation.w);
-        Loudness = (LoudnessMonitor.GetVolume(_source.timeSamples, _source.clip));
-        transform.rotation = Quaternion.Lerp(Pmin, Pmax, (Loudness));
-        
+
+        if (play)
+        {
+            Quaternion Pmax = new Quaternion(transform.rotation.x, transform.rotation.y, rotMax, transform.rotation.w);
+            Quaternion Pmin = new Quaternion(transform.rotation.x, transform.rotation.y, rotLim, transform.rotation.w);
+            Loudness = (LoudnessMonitor.GetVolume(_source.timeSamples, _source.clip));
+            transform.rotation = Quaternion.Lerp(Pmin, Pmax, (Loudness));
+        }
+
 
     }
     IEnumerator PowerUpTimer()
@@ -73,11 +82,11 @@ public class Rotate : MonoBehaviour
     IEnumerator BadPowerUpTimer()
     {
         IsCoroutineRunning = true;
-        Debug.Log("Waiting");
+        
         yield return new WaitForSeconds(PowerUpTime);
         
         _badpowerup.BadPowerupActivated = false;
-        Debug.Log("Waiting Done");
+        
         _source.pitch = 1;
     }
 

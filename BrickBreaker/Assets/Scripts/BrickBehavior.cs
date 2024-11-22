@@ -4,9 +4,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class BrickBehavior : MonoBehaviour
+public static class testclass : iTest
 {
-    // Start is called before the first frame update
+    public static int HitCount = 0;
+
+    public interface iTest
+    {
+        void Test();
+    }   
     void Start()
     {
         
@@ -18,15 +23,14 @@ public class BrickBehavior : MonoBehaviour
         
         
     }
-
-    private void OnCollisionEnter2D(Collision2D other)
+    private void Adder()
     {
-        if (other.transform.CompareTag("Ball"))
-        {
-            Destroy(this.gameObject);
-            
-        }
         
+
+    
+    
     }
+
+
     
 }

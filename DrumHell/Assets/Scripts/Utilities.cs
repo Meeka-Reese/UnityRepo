@@ -9,5 +9,11 @@ public class Utilities
         Air,
         Ground
     }
+
+    public enum PauseState
+    {
+        Pause,
+        Play
+    }
   
 }

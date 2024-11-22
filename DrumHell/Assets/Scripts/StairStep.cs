@@ -16,10 +16,14 @@ public class StairStep : MonoBehaviour
     private bool PowerupActive;
     [SerializeField] float PowerUpTime = 5f;
     private bool IsCoroutineRunning = false;
+    private GameBehavior GameBehavior;
+    private bool play = true;
 
    
     void Start()
     {
+        
+        GameBehavior = FindObjectOfType<GameBehavior>();
         _source = GetComponent<AudioSource>();
         _source.loop = true; 
         PlaySampleWithDelay(delay);
@@ -29,16 +33,21 @@ public class StairStep : MonoBehaviour
     
     void Update()
     {
+        play = global::GameBehavior.Instance.play;
         PowerupActive = _powerup.PowerupActivated;
         _source.pitch = PowerupActive == true ? .5f : 1f;
         if (PowerupActive && !IsCoroutineRunning)
         {
             StartCoroutine(PowerUpTimer());
         }
-        Vector3 Pmax = new Vector3(xMax, transform.position.y, transform.position.z);
-        Vector3 Plim = new Vector3(xLim, transform.position.y, transform.position.z);
-        Loudness = (LoudnessMonitor.GetVolume(_source.timeSamples, _source.clip)) * 10f;
-        transform.position = Vector3.Lerp(Plim, Pmax, (Loudness) * MoveSize);
+
+        if (play)
+        {
+            Vector3 Pmax = new Vector3(xMax, transform.position.y, transform.position.z);
+            Vector3 Plim = new Vector3(xLim, transform.position.y, transform.position.z);
+            Loudness = (LoudnessMonitor.GetVolume(_source.timeSamples, _source.clip)) * 10f;
+            transform.position = Vector3.Lerp(Plim, Pmax, (Loudness) * MoveSize);
+        }
     }
     void PlaySampleWithDelay(float delay)
     {
