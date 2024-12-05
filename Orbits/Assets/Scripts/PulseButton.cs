@@ -27,19 +27,7 @@ public class PulseButton : MonoBehaviour
         
         StartCoroutine(Pulse());
         Debug.Log("pulse");
-        // foreach (GameObject a in celestials)
-        // {
-        //     
-        //             
-        //             float Ran = Random.Range(-1, 1) >= 0 ? 1 : -1;
-        //             
-        //             a.transform.eulerAngles +=
-        //                 new Vector3(Random.Range(-90, 90), Random.Range(-90, 90), Random.Range(-90, 90));
-        //             a.GetComponent<Rigidbody>().velocity += a.transform.right * Ran * Mathf.Sqrt((G * 1000) / 1);
-        //
-        //         
-        //     
-        // }
+        
         
     }
 
@@ -50,3 +38,4 @@ public class PulseButton : MonoBehaviour
         pulse = false;
     }
 }
+// markov chains rnbo spacialize audio to camera UDP max

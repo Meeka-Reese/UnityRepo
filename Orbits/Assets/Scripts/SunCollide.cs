@@ -30,7 +30,7 @@ public class SunCollide : MonoBehaviour
                 float Ran = UnityEngine.Random.Range(-1, 1) >= 0 ? 1 : -1;
                 transform.eulerAngles +=
                     new Vector3(UnityEngine.Random.Range(-90, 90), UnityEngine.Random.Range(-90, 90), UnityEngine.Random.Range(-90, 90));
-                GetComponent<Rigidbody>().velocity += transform.right * Ran * Mathf.Sqrt((1 * 1000) / 1);
+                GetComponent<Rigidbody>().linearVelocity += transform.right * Ran * Mathf.Sqrt((1 * 1000) / 1);
             }
         }
         

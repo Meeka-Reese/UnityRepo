@@ -84,7 +84,7 @@ public class SolarSystem : MonoBehaviour
                     float r = Vector3.Distance(a.transform.position, b.transform.position);
                     a.transform.LookAt(b.transform);
                     a.transform.eulerAngles += new Vector3(Random.Range(-90,90), Random.Range(-90,90), Random.Range(-90,90));
-                    a.GetComponent<Rigidbody>().velocity += a.transform.right * Ran * Mathf.Sqrt((G * m2) / r);
+                    a.GetComponent<Rigidbody>().linearVelocity += a.transform.right * Ran * Mathf.Sqrt((G * m2) / r);
                     
                 }
             }
