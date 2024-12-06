@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.cycling74.fmtry3": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/RnboTest3/rnbo.unity.audioplugin-main/build/Fmtry3",
     "com.cycling74.rnbotypes": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/rnbo.unity.audioplugin-main/RNBOTypes",
     "com.cycling74.simplefmv1": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/FmSynthV.1/rnbo.unity.audioplugin-main/build/SimpleFMv1",
     "com.cycling74.synthtest": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/rnbo.unity.audioplugin-main/build/SynthTest",

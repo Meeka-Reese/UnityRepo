@@ -716,7 +716,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1470,7 +1470,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.1
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1523,7 +1523,7 @@ ParticleSystem:
     rateOverDistance:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3
+      scalar: 0.1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5396,9 +5396,9 @@ AudioSource:
   m_GameObject: {fileID: 1877929478}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: df862256e10614335b803cf7713cf67f, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 5d22e7c739a47483baa59ce1c3ff7a67, type: 3}
-  m_Resource: {fileID: 8300000, guid: 5d22e7c739a47483baa59ce1c3ff7a67, type: 3}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 7b6e2b6311f624969b410f1b5a83807a, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5496,7 +5496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e2fb1d98efd470eb252e19a9f47f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Synthmixer: {fileID: 24100000, guid: df862256e10614335b803cf7713cf67f, type: 2}
+  Synthmixer: {fileID: 24100000, guid: 7b6e2b6311f624969b410f1b5a83807a, type: 2}
   CoroutineIsRunning: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -1,5 +1,13 @@
 {
   "dependencies": {
+    "com.cycling74.fmtry3": {
+      "version": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/RnboTest3/rnbo.unity.audioplugin-main/build/Fmtry3",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {
+        "com.cycling74.rnbotypes": "0.0.2"
+      }
+    },
     "com.cycling74.rnbotypes": {
       "version": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/rnbo.unity.audioplugin-main/RNBOTypes",
       "depth": 0,

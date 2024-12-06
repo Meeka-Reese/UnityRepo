@@ -7,11 +7,13 @@ public class SynthCollide : MonoBehaviour
     
     [SerializeField] AudioMixer Synthmixer;
     public bool CoroutineIsRunning = false;
+    private float randomf;
+    private float randomf2;
     void Start()
     {
         // Test if the parameter exists by trying to get its value
         float value;
-        if (Synthmixer.GetFloat("Volume", out value))
+        if (Synthmixer.GetFloat("adsr", out value))
         {
             Debug.Log("Parameter adsr_trigger' found! Current value: " + value);
         }
@@ -35,12 +37,15 @@ public class SynthCollide : MonoBehaviour
 
     IEnumerator SynthPlay()
     {
-        
+        randomf = Random.Range(200f, 3000f);
+        randomf2 = Random.Range(200f, 3000f);
         Debug.Log("SynthPlay");
         CoroutineIsRunning = true;
-        Synthmixer.SetFloat("adsr_trigger", 1);
+        Synthmixer.SetFloat("adsr", 1);
+        Synthmixer.SetFloat("frequency", randomf);
+        Synthmixer.SetFloat("frequency2", randomf2);
         yield return new WaitForSeconds(0.1f);
-        Synthmixer.SetFloat("adsr_trigger", 0);
+        Synthmixer.SetFloat("adsr", 0);
         CoroutineIsRunning = false;
     }
 }
