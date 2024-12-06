@@ -5,15 +5,15 @@ using UnityEngine.Audio;
 public class SynthCollide : MonoBehaviour
 {
     
-    [SerializeField] AudioMixer mixer;
+    [SerializeField] AudioMixer Synthmixer;
     public bool CoroutineIsRunning = false;
     void Start()
     {
         // Test if the parameter exists by trying to get its value
         float value;
-        if (mixer.GetFloat("adsr_trigger", out value))
+        if (Synthmixer.GetFloat("Volume", out value))
         {
-            Debug.Log("Parameter 'adsr_trigger' found! Current value: " + value);
+            Debug.Log("Parameter adsr_trigger' found! Current value: " + value);
         }
         else
         {
@@ -38,9 +38,9 @@ public class SynthCollide : MonoBehaviour
         
         Debug.Log("SynthPlay");
         CoroutineIsRunning = true;
-        mixer.SetFloat("adsr_trigger", 1);
+        Synthmixer.SetFloat("adsr_trigger", 1);
         yield return new WaitForSeconds(0.1f);
-        mixer.SetFloat("adsr_trigger", 0);
+        Synthmixer.SetFloat("adsr_trigger", 0);
         CoroutineIsRunning = false;
     }
 }

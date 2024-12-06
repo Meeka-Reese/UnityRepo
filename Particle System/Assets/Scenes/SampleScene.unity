@@ -5496,7 +5496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87e2fb1d98efd470eb252e19a9f47f0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mixer: {fileID: 24100000, guid: df862256e10614335b803cf7713cf67f, type: 2}
+  Synthmixer: {fileID: 24100000, guid: df862256e10614335b803cf7713cf67f, type: 2}
   CoroutineIsRunning: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
