@@ -6,11 +6,15 @@ using UnityEngine;
 public class SunCollide : MonoBehaviour
 {
     public bool pulse;
-   [SerializeField] private PulseButton _pulseButton;
+   private PulseButton _pulseButton;
+   
+   
     
     // Start is called before the first frame update
     void Start()
     {
+        _pulseButton = FindObjectOfType<PulseButton>();
+        
         
     }
 
@@ -25,19 +29,30 @@ public class SunCollide : MonoBehaviour
         if (other.gameObject.CompareTag("planet"))
         {
 
-            if (pulse)
-            { 
+            // if (pulse)
+            // { 
                 float Ran = UnityEngine.Random.Range(-1, 1) >= 0 ? 1 : -1;
                 transform.eulerAngles +=
                     new Vector3(UnityEngine.Random.Range(-90, 90), UnityEngine.Random.Range(-90, 90), UnityEngine.Random.Range(-90, 90));
-                GetComponent<Rigidbody>().linearVelocity += transform.right * Ran * Mathf.Sqrt((1 * 1000) / 1);
-            }
+                GetComponent<Rigidbody>().velocity += transform.right * Ran * Mathf.Sqrt((1 * 1000) / 1);
+            // }
         }
         
        
     }
 
-   
-
-    
+    // private void OnTriggerExit(Collider other)
+    // {
+    //     if (other.gameObject.CompareTag("bounds"))
+    //     {
+    //         Rigidbody rb = GetComponent<Rigidbody>();
+    //         if (rb != null)
+    //         {
+    //
+    //
+    //             Boundshit = true;
+    //             Debug.Log("Velo Rev");
+    //         }
+    //     }
+    // }
 }

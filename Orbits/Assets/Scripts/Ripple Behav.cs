@@ -8,7 +8,7 @@ using System.Linq;
 public class RippleBehav : MonoBehaviour
 {
     
-    [SerializeField] GameObject SoundTrigger; 
+    public GameObject _soundTrigger; 
     [SerializeField] private ParticleSystem particle;
     private Rigidbody rb;
     private AudioSource audio;
@@ -28,6 +28,7 @@ public class RippleBehav : MonoBehaviour
         
 
         InitNoteMultipliers();
+        _soundTrigger = GameObject.Find("SoundTrigger");
 
 
     }
@@ -52,7 +53,7 @@ public class RippleBehav : MonoBehaviour
     {
         if (other.gameObject.CompareTag("trigger"))
         {
-            Debug.Log(other.gameObject.name);
+            
             particle.Play();
             StartCoroutine(PlaySample());
         }
