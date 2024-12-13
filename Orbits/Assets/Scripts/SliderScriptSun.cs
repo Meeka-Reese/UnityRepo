@@ -9,6 +9,8 @@ public class SliderScriptSun : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private TextMeshProUGUI text;
     private GameObject Sun;
+    [SerializeField] private string TextString;
+    private bool CorutineRunning = false;
     
  
     public float Mass;
@@ -29,7 +31,12 @@ public class SliderScriptSun : MonoBehaviour
         {
             text.text = v.ToString("0.00");
             Mass = v;
+            if (!CorutineRunning)
+            {
+                StartCoroutine(SliderWait());
+            }
         });
+        
         slider.value = initValue;
         
         
@@ -43,5 +50,12 @@ public class SliderScriptSun : MonoBehaviour
         rb.mass = Mass;
         
         
+    }
+    IEnumerator SliderWait()
+    {
+        CorutineRunning = true;
+        yield return new WaitForSecondsRealtime(0.5f);
+        text.text = TextString;
+        CorutineRunning = false;
     }
 }

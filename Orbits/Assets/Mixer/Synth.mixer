@@ -16,14 +16,120 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: 02bd132994c1a4285b05c460beba0f79
-    name: count
-  - guid: c029393e5ad6e413685605fb6395994f
-    name: trigger
-  - guid: e05cdebfc373d43b0b40ed10475fb3a9
-    name: gain
-  - guid: 0fd7e2ccb71ff466aacbee3f5c4367bb
-    name: notenum
+  - guid: 4099c8cb38b25490f8487807606a9343
+    name: NoteNum4
+  - guid: 9e3113c5181314032955447b3a67445d
+    name: NoteNum3
+  - guid: 60adfbd9797b34a29b7298c43ef3b2ee
+    name: S5
+  - guid: 18d2a123b4f344e5ba312b1f75670840
+    name: BassTrigger
+  - guid: 0b51500aaad414b729efb28c0e01793e
+    name: Trigger4
+  - guid: db376df304ebd489187de805664948ef
+    name: S6
+  - guid: 069b051c4169b40659c5094844d529e5
+    name: S3
+  - guid: 6b61a1915926b438da88dab55e9aee8e
+    name: Trigger1
+  - guid: 2ecaa08612748498f964a277baf03351
+    name: S7
+  - guid: 6d9f89953ea83480096280d821838cdb
+    name: Trigger8
+  - guid: 66d5843896a694edcb0e55ab1ab7c44f
+    name: BA
+  - guid: 6cd33c87cc52e410cb8fe5cef8cad8ad
+    name: S4
+  - guid: 71b8f6d11fdb84b9aad38f836adb6e85
+    name: NoteNum2
+  - guid: 5e416f8f190d3469fb4806d000f74511
+    name: Gain
+  - guid: f597972488ce24939bf5f6df3b30ee02
+    name: D5
+  - guid: e31584faf740b4504b45892b8ff623a9
+    name: Trigger6
+  - guid: 7d5e0a04c087141f5bf217cd3ab1fd1b
+    name: D3
+  - guid: 53e688a48cc1e4ea0ab003584a908d31
+    name: S2
+  - guid: 4a006b20fb4274281a38e05e2ca5d41a
+    name: D6
+  - guid: 8db13a416cd2140f5b693e0b624248a7
+    name: D2
+  - guid: ec9f10fa9947a49a9be9bef69cb51230
+    name: NoteNum1
+  - guid: 2e0e98758749946f99c47b33ba29a27a
+    name: D4
+  - guid: da4834bc1d32d4214922f2e0daa7dfbc
+    name: Trigger2
+  - guid: 09369eccf164849368ac5db02bdc5046
+    name: S1
+  - guid: 6fc2d363cbf084330aaf33b795d11328
+    name: Trigger3
+  - guid: b9aa136772e2b4efcb68b12bce6fa3c1
+    name: BR
+  - guid: 0704891829ce741619364049e5d40573
+    name: D1
+  - guid: 38b22c5ef152b48d7b3e4630f86a1a7f
+    name: BD
+  - guid: 0d5a527cf497a43bc9d3f4a2e41998e6
+    name: BS
+  - guid: 9ba05afaef2a94ca5b4850f033e2c1e0
+    name: A5
+  - guid: 89fb73fd989ec407ab252662937597ba
+    name: A6
+  - guid: 362a6c50cb90346f8aa4700346b87582
+    name: R1
+  - guid: 833b95125e3ec4c55a82b305182c73f8
+    name: NoteNum6
+  - guid: 2c84093d0e93945dca6a96f967044a4d
+    name: A7
+  - guid: 0a923dc04cf3049689c89c58c66c7243
+    name: A4
+  - guid: 1bc967a5f1c3a4b83a6d62339b2090d4
+    name: BassGain
+  - guid: 57d04175e24be4a3aaaee56c3418fc7d
+    name: A8
+  - guid: f15b801a0b5324544a479d1ad597a0f6
+    name: Trigger5
+  - guid: 1cfb87e2b376046deaf2ac8fe8317078
+    name: NoteNum8
+  - guid: 3fd2510bb9ea740f58898f02d6c12da1
+    name: A2
+  - guid: 001a16a26cd4b4c8c9e2eb340f4ac964
+    name: S8
+  - guid: ff0b37d5d22fc407ba169455cb36c0a3
+    name: BassNoteNum
+  - guid: f70471a31b01942959599eb09d235c19
+    name: NoteNum7
+  - guid: aad9f4116ccb5488db99c4672e05d735
+    name: A1
+  - guid: 8a53c0a693b8d496cb7def88b7009b7e
+    name: R4
+  - guid: c925b0f09f2e44a0ebbfc98db49a7fcb
+    name: A3
+  - guid: 675fd335fc90d44e29445d95dc718a2d
+    name: R7
+  - guid: e120f8224bf2e4378afcccb1ae0802b2
+    name: R3
+  - guid: d7bbc4da344ed404c9c55d8994d97ada
+    name: NoteNum5
+  - guid: d48108964a805496c81949b02acda47a
+    name: R5
+  - guid: a8b1250ce28d94e91a50dccfa39a6c30
+    name: R8
+  - guid: 73afa1e81c975407da94d0ac773e5903
+    name: D8
+  - guid: 11dc7243f977148d789ddf21a1018d44
+    name: R2
+  - guid: fc0e8ad1210634aaf97d52ffcc682ea7
+    name: Trigger7
+  - guid: d94435340b72040298b68055aecc7ed8
+    name: R6
+  - guid: 4e941f021caf9499a9593b4c0ddfe870
+    name: D7
+  - guid: 4bd4f6dc3555e47bcae9113cb76e1fff
+    name: BassFM
   m_AudioMixerGroupViews:
   - guids:
     - d5106b4504db2420fa2088ec487a77e9
@@ -45,7 +151,7 @@ AudioMixerGroupController:
   m_Send: 00000000000000000000000000000000
   m_Effects:
   - {fileID: 24400004}
-  - {fileID: 1862249595783371084}
+  - {fileID: 3360019535084756255}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -74,6 +180,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 0876d1b4dc84a40e39b374eaaaaf588e
   m_FloatValues:
+    7a319700b8ce4471a89a5c2933393621: 319
     7bf7dd00e198e4f3f8b3db458fd4c740: 1
     b1e23d405febb4f1c9416259f97eb270: 0
     2cb470906682d4408a59c2665d1c0e84: 0
@@ -82,29 +189,39 @@ AudioMixerSnapshotController:
     732ec001d215a41c894e38c47d7619eb: 0
     bffc6b11cbba746488bbf9b6d71265b3: 58.3
     2cb57c12f18dd4f08a7a0c4a739ebb76: 407
+    3c14c552dfa034ef08ffbce382fc4dd1: 0
     b9744c82a052b4fe0a4033fc2740a5a0: 1
     c90893a28cab2400aac1694778127d27: 4
     a2194bb2ea4e0407e88a8c743be5d5ed: 802
     13d8faf26277d4f96b684a88a848b0e2: 0
     dbc953b33458d4ffd80f5c2b15f44a13: 1
+    aea52134d9b5441bf87b3fada74dd07f: 0
     5b44bb649064c449f8f56b529730526d: 725
+    ff0de7a4c9c6f458cae8aa4e6ac29977: 0.5
+    47afbfb4af05c4bcbae0bb9f4094b135: 1
     4d78aad472afa42baba3fc0aa6577952: 2.05
-    b4ee81567e35542d3b617733b37ad1b4: 1
+    b4ee81567e35542d3b617733b37ad1b4: 0
     6da544564112a4b9c83f5636ce5f161c: 0
     f9655986f48fb4dde875998f19922f08: 84.4
     00334507c123345bba976de2f9cd7955: 537
     f6914b17cf95d46dfbf334fe4d4ac32b: 1
     26279b370720f43a3a03de069f383f8a: 0
+    65da1157b74844c438b79fed45ca82ad: 0
     fbe3db78b34964d7fa88c681b771fe6f: 0
+    c543b9f86ac43422e8bb12c0fdefa5db: -17
     50fd9f29c37bd4af1a67bbcdc55daf05: 0
     bf80e639d410148bd92bc6fbc16e411c: 0
     479f5ed93f1cb456cbfd981fbe2ac3b2: 0
     7b17f41a35c4748ad82b181e9d6ab87f: 6243
     79ae403ad4202450f960eb02de21d482: 0
+    3e40237b056954bd484e85c569b392a4: 12.5
     519e2b7b7b45d48549d4fc7c445abc97: 0
     5dbc91db308394e1ab7254b0692fd648: 0
     d04b6cdb416e140e385637a088601e3a: 0
+    624dc70cc83b149c088c0f0532246eb1: 1
     615cbc1c8b1c9433990b1badd06bc74f: 0
+    f729486c1d7d64015b89762a62cb8c0d: 796
+    018a997cb432d420b85401ceb3c10c30: 0
     db4707ccbff1b4e69a9310f026187fff: 0
     cc80481da58744cb1a7cbf7c598e8f3e: 0
     6964a6fd51c174f498e3a062573d213e: 1
@@ -116,102 +233,139 @@ AudioMixerSnapshotController:
     a613755fc08c34f9fbaf13ddbe461752: 0
     93b6ce9f5542f413492e2f10ecfc93e0: 0
     e05cdebfc373d43b0b40ed10475fb3a9: 0
+    734291cf88d124e379f4306475d49de3: 290
   m_TransitionOverrides: {}
---- !u!244 &1862249595783371084
+--- !u!244 &3360019535084756255
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_EffectID: dbeb8ebb0b0c448bd824b6d24d09f1e3
-  m_EffectName: My Custom Plugin
-  m_MixLevel: 2c66dcf41d53e4f968b6e9914122461d
+  m_EffectID: 1261746c2e45741bfa74e2bec2d6b644
+  m_EffectName: Test10
+  m_MixLevel: ef4b88925d8b846d5bf29cfd09f01639
   m_Parameters:
   - m_ParameterName: 'Instance Index '
-    m_GUID: e6e5c3833072e4254bb61f8b74229bc2
-  - m_ParameterName: note_number
-    m_GUID: 0fd7e2ccb71ff466aacbee3f5c4367bb
-  - m_ParameterName: Count
-    m_GUID: 02bd132994c1a4285b05c460beba0f79
-  - m_ParameterName: adsr_trigger
-    m_GUID: c029393e5ad6e413685605fb6395994f
+    m_GUID: 639cd7e81a79e42ca96f839e8fedf098
+  - m_ParameterName: note_number4
+    m_GUID: 4099c8cb38b25490f8487807606a9343
+  - m_ParameterName: note_number3
+    m_GUID: 9e3113c5181314032955447b3a67445d
+  - m_ParameterName: note_number2
+    m_GUID: 71b8f6d11fdb84b9aad38f836adb6e85
+  - m_ParameterName: note_number1
+    m_GUID: ec9f10fa9947a49a9be9bef69cb51230
+  - m_ParameterName: adsr_trigger4
+    m_GUID: 0b51500aaad414b729efb28c0e01793e
+  - m_ParameterName: adsr_trigger3
+    m_GUID: 6fc2d363cbf084330aaf33b795d11328
+  - m_ParameterName: adsr_trigger2
+    m_GUID: da4834bc1d32d4214922f2e0daa7dfbc
+  - m_ParameterName: adsr_trigger1
+    m_GUID: 6b61a1915926b438da88dab55e9aee8e
   - m_ParameterName: gain
-    m_GUID: e05cdebfc373d43b0b40ed10475fb3a9
-  - m_ParameterName: attack_time
-    m_GUID: 4901da9bf197b4b63ae50d8e4c18f3bc
-  - m_ParameterName: decay_time
-    m_GUID: f729486c1d7d64015b89762a62cb8c0d
+    m_GUID: 5e416f8f190d3469fb4806d000f74511
+  - m_ParameterName: note_number7
+    m_GUID: f70471a31b01942959599eb09d235c19
+  - m_ParameterName: note_number6
+    m_GUID: 833b95125e3ec4c55a82b305182c73f8
+  - m_ParameterName: note_number5
+    m_GUID: d7bbc4da344ed404c9c55d8994d97ada
+  - m_ParameterName: note_number8
+    m_GUID: 1cfb87e2b376046deaf2ac8fe8317078
+  - m_ParameterName: Bassnote_number
+    m_GUID: ff0b37d5d22fc407ba169455cb36c0a3
+  - m_ParameterName: BassGain
+    m_GUID: 1bc967a5f1c3a4b83a6d62339b2090d4
   - m_ParameterName: waveform
-    m_GUID: 6964a6fd51c174f498e3a062573d213e
-  - m_ParameterName: sustian_level
-    m_GUID: b4ee81567e35542d3b617733b37ad1b4
-  - m_ParameterName: release_time
-    m_GUID: 4efb4afd8a06c4319812b50055d10dec
-  - m_ParameterName: voice1/notenumb
-    m_GUID: d707e321cf90649cfa095591927a0507
-  - m_ParameterName: voice1/waveform
-    m_GUID: 700fa64c4106543c0997fdcc7f05b9db
-  - m_ParameterName: voice1/gain
-    m_GUID: cc80481da58744cb1a7cbf7c598e8f3e
-  - m_ParameterName: voice1/adsr_tri
-    m_GUID: fdf1d0b311f7549bd86ba91d6370682c
+    m_GUID: 018a997cb432d420b85401ceb3c10c30
+  - m_ParameterName: adsr_trigger8
+    m_GUID: 6d9f89953ea83480096280d821838cdb
+  - m_ParameterName: adsr_trigger7
+    m_GUID: fc0e8ad1210634aaf97d52ffcc682ea7
+  - m_ParameterName: adsr_trigger6
+    m_GUID: e31584faf740b4504b45892b8ff623a9
+  - m_ParameterName: adsr_trigger5
+    m_GUID: f15b801a0b5324544a479d1ad597a0f6
+  - m_ParameterName: BassTrigger
+    m_GUID: 18d2a123b4f344e5ba312b1f75670840
+  - m_ParameterName: BassWaveform
+    m_GUID: 40941c014aae04fd089f6769976f14c3
   - m_ParameterName: voice1/attack_t
-    m_GUID: 9aa6cbf881ab94c00b0c7f92888ab91a
+    m_GUID: aad9f4116ccb5488db99c4672e05d735
   - m_ParameterName: voice1/sustian_
-    m_GUID: 624dc70cc83b149c088c0f0532246eb1
+    m_GUID: 09369eccf164849368ac5db02bdc5046
   - m_ParameterName: voice1/release_
-    m_GUID: 7a319700b8ce4471a89a5c2933393621
+    m_GUID: 362a6c50cb90346f8aa4700346b87582
   - m_ParameterName: voice1/decay_ti
-    m_GUID: 734291cf88d124e379f4306475d49de3
-  - m_ParameterName: voice2/notenumb
-    m_GUID: 57447b417ceb34c7e8e5ec9255a2d84a
-  - m_ParameterName: voice2/waveform
-    m_GUID: f7a31fb8303344d9f8141b6ba635789a
-  - m_ParameterName: voice2/gain
-    m_GUID: 479f5ed93f1cb456cbfd981fbe2ac3b2
-  - m_ParameterName: voice2/adsr_tri
-    m_GUID: 6d306c6faf2b44bda9602d563ab98e75
+    m_GUID: 0704891829ce741619364049e5d40573
   - m_ParameterName: voice2/attack_t
-    m_GUID: 06da25fffebd54d3387fb157daa95570
+    m_GUID: 3fd2510bb9ea740f58898f02d6c12da1
   - m_ParameterName: voice2/sustian_
-    m_GUID: 4d0b0788875a64cf1986a6b36dc0eea4
+    m_GUID: 53e688a48cc1e4ea0ab003584a908d31
   - m_ParameterName: voice2/release_
-    m_GUID: 7344c7b16104e40a9bbce12fe95d63fc
+    m_GUID: 11dc7243f977148d789ddf21a1018d44
   - m_ParameterName: voice2/decay_ti
-    m_GUID: f9b851536058f4802be77cb15d7c5b90
-  - m_ParameterName: voice3[1]/noten
-    m_GUID: 082629ea199704d59a3bf640b5725160
-  - m_ParameterName: voice3[1]/wavef
-    m_GUID: 2a3391763c6754474b4bfe28da1adfb3
-  - m_ParameterName: voice3[1]/gain
-    m_GUID: a613755fc08c34f9fbaf13ddbe461752
-  - m_ParameterName: voice3[1]/adsr_
-    m_GUID: 5918c7494dc3740a18ef4a919560d6f9
-  - m_ParameterName: voice3[1]/attac
-    m_GUID: 2864443d9eff84f59b367a49d9110de8
-  - m_ParameterName: voice3[1]/susti
-    m_GUID: c1118ee29dd464f02bfb577faa55c60f
-  - m_ParameterName: voice3[1]/relea
-    m_GUID: b73fc32cf76d5423cb3c748b543b0829
-  - m_ParameterName: voice3[1]/decay
-    m_GUID: f951dc153bf1e4ddfb93b7ca91eb9324
-  - m_ParameterName: voice4/notenumb
-    m_GUID: 70ee2cc5e081b43bda66cc1fdb2e449a
-  - m_ParameterName: voice4/waveform
-    m_GUID: 48761f3011dda4693ab8867c49aa2003
-  - m_ParameterName: voice4/gain
-    m_GUID: b1e23d405febb4f1c9416259f97eb270
-  - m_ParameterName: voice4/adsr_tri
-    m_GUID: 59614d99d1da84f4cb55b9cb8c87814b
+    m_GUID: 8db13a416cd2140f5b693e0b624248a7
+  - m_ParameterName: voice3/attack_t
+    m_GUID: c925b0f09f2e44a0ebbfc98db49a7fcb
+  - m_ParameterName: voice3/sustian_
+    m_GUID: 069b051c4169b40659c5094844d529e5
+  - m_ParameterName: voice3/release_
+    m_GUID: e120f8224bf2e4378afcccb1ae0802b2
+  - m_ParameterName: voice3/decay_ti
+    m_GUID: 7d5e0a04c087141f5bf217cd3ab1fd1b
   - m_ParameterName: voice4/attack_t
-    m_GUID: cdd2e0723cfe84d69a6015b48c518645
+    m_GUID: 0a923dc04cf3049689c89c58c66c7243
   - m_ParameterName: voice4/sustian_
-    m_GUID: 6a6ce4e11cfd74619885597242d37e1f
+    m_GUID: 6cd33c87cc52e410cb8fe5cef8cad8ad
   - m_ParameterName: voice4/release_
-    m_GUID: b50cf017317d949fea67ba830d7a3bb7
+    m_GUID: 8a53c0a693b8d496cb7def88b7009b7e
   - m_ParameterName: voice4/decay_ti
-    m_GUID: cb71f76d711bc4c7a89e1b350a3dfa6a
+    m_GUID: 2e0e98758749946f99c47b33ba29a27a
+  - m_ParameterName: voice5/attack_t
+    m_GUID: 9ba05afaef2a94ca5b4850f033e2c1e0
+  - m_ParameterName: voice5/sustian_
+    m_GUID: 60adfbd9797b34a29b7298c43ef3b2ee
+  - m_ParameterName: voice5/release_
+    m_GUID: d48108964a805496c81949b02acda47a
+  - m_ParameterName: voice5/decay_ti
+    m_GUID: f597972488ce24939bf5f6df3b30ee02
+  - m_ParameterName: voice6/attack_t
+    m_GUID: 89fb73fd989ec407ab252662937597ba
+  - m_ParameterName: voice6/sustian_
+    m_GUID: db376df304ebd489187de805664948ef
+  - m_ParameterName: voice6/release_
+    m_GUID: d94435340b72040298b68055aecc7ed8
+  - m_ParameterName: voice6/decay_ti
+    m_GUID: 4a006b20fb4274281a38e05e2ca5d41a
+  - m_ParameterName: voice7/attack_t
+    m_GUID: 2c84093d0e93945dca6a96f967044a4d
+  - m_ParameterName: voice7/sustian_
+    m_GUID: 2ecaa08612748498f964a277baf03351
+  - m_ParameterName: voice7/release_
+    m_GUID: 675fd335fc90d44e29445d95dc718a2d
+  - m_ParameterName: voice7/decay_ti
+    m_GUID: 4e941f021caf9499a9593b4c0ddfe870
+  - m_ParameterName: voice8/attack_t
+    m_GUID: 57d04175e24be4a3aaaee56c3418fc7d
+  - m_ParameterName: voice8/sustian_
+    m_GUID: 001a16a26cd4b4c8c9e2eb340f4ac964
+  - m_ParameterName: voice8/release_
+    m_GUID: a8b1250ce28d94e91a50dccfa39a6c30
+  - m_ParameterName: voice8/decay_ti
+    m_GUID: 73afa1e81c975407da94d0ac773e5903
+  - m_ParameterName: Bassvoice1/fmam
+    m_GUID: 4bd4f6dc3555e47bcae9113cb76e1fff
+  - m_ParameterName: Bassvoice1/atta
+    m_GUID: 66d5843896a694edcb0e55ab1ab7c44f
+  - m_ParameterName: Bassvoice1/sust
+    m_GUID: 0d5a527cf497a43bc9d3f4a2e41998e6
+  - m_ParameterName: Bassvoice1/rele
+    m_GUID: b9aa136772e2b4efcb68b12bce6fa3c1
+  - m_ParameterName: Bassvoice1/deca
+    m_GUID: 38b22c5ef152b48d7b3e4630f86a1a7f
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0

@@ -174,7 +174,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 3
   Loop: 0
-  Mute: 0
+  Mute: 1
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
@@ -304,7 +304,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pulse: 0
-  _pulseButton: {fileID: 0}
 --- !u!164 &6690002622275787135
 AudioReverbFilter:
   m_ObjectHideFlags: 0

@@ -11,6 +11,8 @@ public class SliderScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text;
     private GameObject[] Orbits;
     private List<GameObject> orbitList = new List<GameObject>();
+    [SerializeField] private string TextString;
+    private bool CorutineRunning = false;
  
     public float Mass;
 
@@ -34,8 +36,14 @@ public class SliderScript : MonoBehaviour
      {
        text.text = v.ToString("0.00");
        Mass = v;
+       if (!CorutineRunning)
+       {
+           StartCoroutine(SliderWait());
+       }
+       
        
      });
+     
      
     }
 
@@ -56,5 +64,13 @@ public class SliderScript : MonoBehaviour
             }
         }
         
+    }
+
+    IEnumerator SliderWait()
+    {
+        CorutineRunning = true;
+        yield return new WaitForSecondsRealtime(0.5f);
+        text.text = TextString;
+        CorutineRunning = false;
     }
 }

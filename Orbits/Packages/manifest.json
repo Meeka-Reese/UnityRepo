@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "com.cycling74.mycustomplugin": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/RnboTest7/rnbo.unity.audioplugin-main/build/MyCustomPlugin",
-    "com.cycling74.rnbotypes": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/RnboTest7/rnbo.unity.audioplugin-main/RNBOTypes",
+    "com.cycling74.rnbotypes": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/BassFM/rnbo.unity.audioplugin-main/RNBOTypes",
+    "com.cycling74.test10": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/RnboTest10/rnbo.unity.audioplugin-main/build/Test10",
     "com.unity.collab-proxy": "2.5.2",
     "com.unity.feature.development": "1.0.1",
     "com.unity.render-pipelines.universal": "14.0.9",

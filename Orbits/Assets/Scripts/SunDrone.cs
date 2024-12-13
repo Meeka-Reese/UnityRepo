@@ -31,9 +31,9 @@ public class SunDrone : MonoBehaviour
         audio.clip = Drone1;
         audio.Play();
         particle.Play();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
         particle.Stop();
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(10f);
         Coroutinerunning = false;
     }
 }

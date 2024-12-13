@@ -8,6 +8,8 @@ public class SliderScriptTime : MonoBehaviour
 {
     [SerializeField] private Slider slider;
     [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private string TextString;
+    private bool CorutineRunning = false;
     
     
  
@@ -27,10 +29,22 @@ public class SliderScriptTime : MonoBehaviour
         {
             text.text = v.ToString("0.00");
             Time = v;
+            if (!CorutineRunning)
+            {
+                StartCoroutine(SliderWait());
+            }
         });
+        
      
     }
 
+    IEnumerator SliderWait()
+    {
+        CorutineRunning = true;
+        yield return new WaitForSecondsRealtime(0.5f);
+        text.text = TextString;
+        CorutineRunning = false;
+    }
     // Update is called once per frame
     void Update()
     {

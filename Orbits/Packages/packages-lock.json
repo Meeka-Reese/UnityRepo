@@ -1,18 +1,18 @@
 {
   "dependencies": {
-    "com.cycling74.mycustomplugin": {
-      "version": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/RnboTest7/rnbo.unity.audioplugin-main/build/MyCustomPlugin",
+    "com.cycling74.rnbotypes": {
+      "version": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/BassFM/rnbo.unity.audioplugin-main/RNBOTypes",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
+    "com.cycling74.test10": {
+      "version": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/RnboTest10/rnbo.unity.audioplugin-main/build/Test10",
       "depth": 0,
       "source": "local",
       "dependencies": {
         "com.cycling74.rnbotypes": "0.0.2"
       }
-    },
-    "com.cycling74.rnbotypes": {
-      "version": "file:/Users/meeka/Documents/GitHub/Unity/UnityRepo/RNBO/RnboTest7/rnbo.unity.audioplugin-main/RNBOTypes",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
     },
     "com.unity.burst": {
       "version": "1.8.11",
