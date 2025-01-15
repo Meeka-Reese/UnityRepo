@@ -33,7 +33,7 @@ public class MidiTrigger : MonoBehaviour
     private void Start()
     {
         mixer.SetFloat("gain", -40);
-        mixer.SetFloat("BassGain", -10);
+        mixer.SetFloat("BassGain", -1800);
         
         StartCoroutine(Bass());
         slider.onValueChanged.AddListener((v) =>
