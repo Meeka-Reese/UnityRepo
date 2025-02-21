@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Paintdot
+  m_Shader: {fileID: 4800000, guid: 34a8fd178af7a4aa2b2874cd6d6d844e, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _GradientNoise:
+        m_Texture: {fileID: 2800000, guid: b0128a890b7ac453d914937d201398c2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 6a9caf702777d4f9bb8b6a77b8cf9d4e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTex:
+        m_Texture: {fileID: 2800000, guid: bc48940a0653f4c1c8badd8b15e302d0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondGrad:
+        m_Texture: {fileID: 2800000, guid: bf309a0e48e8746e0838112f7b84c3b8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VoronoiNoise:
+        m_Texture: {fileID: 2800000, guid: bf823a438682b4512ab7b6628b2a2889, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AniLength: 1
+    - _Fade: 1
+    - _Fade2: 1
+    - _Interval: 0
+    - _NoiseAmount: 0.5
+    - _OuterTime: 0
+    m_Colors:
+    - _Color1: {r: 0.17702031, g: 0.4243175, b: 0.9622642, a: 1}
+    - _Color2: {r: 0.29169634, g: 0.8962264, b: 0.46031687, a: 1}
+  m_BuildTextureStacks: []
+  m_AllowLocking: 1

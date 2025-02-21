@@ -1,0 +1,62 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Terrain
+  - Brush
+  - Sticker
+  - RayCastCollider
+  - player
+  - Draw
+  - Grass
+  - Dirt
+  - Wood
+  - Sand
+  - Notification
+  - NotePadHud
+  - GalleryHUD
+  - Slot
+  - DistortionCollider
+  - Notification2
+  - Notification3
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Outline
+  - Terrain
+  - Water
+  - pixel
+  - NoCollide
+  - Player
+  - Boundary
+  - PaintTab
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  m_RenderingLayers:
+  - Default
