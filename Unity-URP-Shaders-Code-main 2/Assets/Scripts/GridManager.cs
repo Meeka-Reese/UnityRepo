@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,11 +19,28 @@ public class GridManager : MonoBehaviour
     public List<GameObject> Pixels;
     private Color LastColor;
     private bool EraseColorSwap = false;
+   public Dictionary<string, int> ColorAmount;
+    public string CurrentColorName = "Black";
+    
     void Awake()
     {
         _shaderChangeHandler = FindObjectOfType<ShaderChangeHandler>();
         GridHolder = GameObject.Find("Grid Holder");
-        
+        ColorAmount = new Dictionary<string, int>
+        {
+            {"Purple", 0},
+            {"Yellow",0},
+            {"Green",0},
+            {"Brown",0},
+            {"Black",0},
+            {"Grey",0},
+            {"Blue",0},
+            {"Red",0},
+            {"Orange",0},
+            {"White",0},
+            {"Pink",0},
+            {"",0}
+        };
         GridPos = new Vector3(GridHolder.transform.position.x, GridHolder.transform.position.y, GridHolder.transform.position.z);
         SpawnGrid();
     }
@@ -43,7 +62,8 @@ public class GridManager : MonoBehaviour
         {
             SetPreviousColor();
         }
-        
+        // Debug.Log(ColorAmount["Purple"]);
+       
         
     }
 
@@ -65,6 +85,8 @@ public class GridManager : MonoBehaviour
     {
         
             CurrentColor = color.GetComponent<Image>().color;
+            CurrentColorName = color.gameObject.name;
+            
             
             LastColor = CurrentColor;
     }
@@ -86,5 +108,25 @@ public class GridManager : MonoBehaviour
     public Color GetCurrentColor()
     {
         return CurrentColor;
+    }
+
+    public void Bucket()
+    {
+        // Reset all existing colors
+        foreach (var key in ColorAmount.Keys.ToList())
+        {
+            ColorAmount[key] = 0;
+        }
+
+        // Safely set the current color
+        if (ColorAmount.ContainsKey(CurrentColorName))
+        {
+            ColorAmount[CurrentColorName] = 4800;
+        }
+        else
+        {
+            Debug.LogError($"Color '{CurrentColorName}' not found in dictionary!");
+            
+        }
     }
 }

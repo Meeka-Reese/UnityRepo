@@ -52,8 +52,8 @@ Material:
     - _GradientNoiseScale: 10
     - _GradientNoiseScale2: 50
     - _Normal_Threshold: 2.66
-    - _OFFSETX: 0.14755002
-    - _OFFSETY: -0.09168751
+    - _OFFSETX: 0.20145
+    - _OFFSETY: 0.103087485
     - _OVERLAY: 1
     - _squigglepower: 0.4
     m_Colors:

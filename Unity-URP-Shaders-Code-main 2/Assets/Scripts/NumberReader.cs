@@ -47,7 +47,9 @@ public class NumberReader : MonoBehaviour
         var predictedNumber = indexOfMaxProba[0];
         var probability = probabilities[predictedNumber];
 
-        Debug.Log(predictedNumber);
+        Debug.Log(predictedNumber + "Predicted");
+        Debug.Log(probability + "Probability");
+        
         
     
 

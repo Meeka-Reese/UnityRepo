@@ -49,7 +49,7 @@ public class Talking : MonoBehaviour
             ray = MainCamera.ScreenPointToRay(Input.mousePosition);
 
             // Perform raycast and ignore objects on the "Notification" layer
-            Debug.Log(DonePrintingText);
+            
             if (Physics.Raycast(ray, out hit, MaxTalkDistance, ~combinedIgnoreLayers) && DonePrintingText)
             {
                 if (hit.collider != null && hit.collider.gameObject.CompareTag(TagName))
