@@ -36,6 +36,25 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!243 &-6897034333749321824
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Csound
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 7b37029f688d046fe95671c13090d722
+  m_Children: []
+  m_Volume: afea0c261f157422eafefe7dce9cc06c
+  m_Pitch: 1cf1af8b2ce5b464693e300f3f55e9d4
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -1695141141693429597}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &-5742380822596493420
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -128,6 +147,20 @@ AudioMixerEffectController:
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
   m_Bypass: 0
+--- !u!244 &-1695141141693429597
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: 588365ceabc5f456fa528f6976cc775c
+  m_EffectName: Attenuation
+  m_MixLevel: d9245c5441bd240c09d579164098a736
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-1274596325466245795
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -211,6 +244,7 @@ AudioMixerController:
     - 7d50870c3ad49406ea030bddcaf181bc
     - 9a7ab25cef1cf4130b53e970c218a7b4
     - 015563f6d0087402aaa5afc7e395d4f5
+    - 7b37029f688d046fe95671c13090d722
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -230,6 +264,7 @@ AudioMixerGroupController:
   - {fileID: -3836702728338558243}
   - {fileID: -8646302385063120531}
   - {fileID: 975073636600750864}
+  - {fileID: -6897034333749321824}
   m_Volume: 6935505da71e7465c8f73707b88e4336
   m_Pitch: 67a4281746aca449ebc40a1f0d91640f
   m_Send: 00000000000000000000000000000000
@@ -270,6 +305,7 @@ AudioMixerSnapshotController:
     f1a38fa21e8d540338e3248a9d3c7b53: 0.04171297
     6639c2133d4de429ba44fb317690d793: 82.4
     fac2cb05e53df451ea34d1f4c2aeec9e: 100
+    afea0c261f157422eafefe7dce9cc06c: 0.44032478
     a46554a62cd794e6885387c09824da42: -7454
     34c2b8276a5a44c0f89b3719299f85ed: -1945
     83fb6f9782b78406eb8b8393c0970cad: -2037

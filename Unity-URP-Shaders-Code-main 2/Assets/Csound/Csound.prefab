@@ -1,0 +1,282 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7444276602772189637
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8736986292228656802}
+  - component: {fileID: 2305054208633444980}
+  - component: {fileID: 8408568549383136929}
+  m_Layer: 0
+  m_Name: Csound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8736986292228656802
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444276602772189637}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &2305054208633444980
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444276602772189637}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -6897034333749321824, guid: d3bf7c57aba9c4a768edea68517b2e2c, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 50000
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.0001
+      value: 1
+      inSlope: -10003.999
+      outSlope: -10003.999
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1.1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &8408568549383136929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7444276602772189637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d20258c641c94f0ea3dc32cfe3de904, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logCsoundOutput: 0
+  mute: 0
+  processClipAudio: 0
+  loudVolumeWarning: 1
+  loudWarningThreshold: 10
+  overrideSamplingRate: 0
+  audioRate: 44100
+  controlRate: 44100
+  csoundScore: 
+  environmentSettings: []
+  _csoundFileGUID: 16f732eb0c79e415a923f6d9aa36273c
+  _csoundString: "<CsoundSynthesizer>\n<CsOptions>\n</CsOptions>\n<CsInstruments>\n;
+    Adapted from Richard Boulanger's toots\nsr = 44100\nksmps = 128\nnchnls = 2\n0dbfs
+    = 1\n\ngarvbL init 0\ngarvbR init 0\ngadlyL init 0\ngadlyR init 0\ngafbL  init
+    0\ngafbR init 0\n\ninstr\t10\t;GUI\n\tktrig\tmetro\t100\n\tif (ktrig == 1)\tthen\n\t\t\n\t\tgkscale\t\tinvalue\t\"Scale\"\n\tendif\nendin\ninstr
+    1\n\tktrigger\tmetro\t\t2\n\tkspeed lfo 2, .1\n\tktrigger2 metro 1 * abs(kspeed)\n\tktrigger3
+    metro 20\n\n\n\tktrigger4 metro 3 \n\tksnareDur = .1\n\tktrigger5 metro 1.5,
+    .5\n\tkdur\t\trandomh\t\t.1,    2,       10\t\t\n\tkBassdur = kdur\n\tkrandom
+    randomh 0,1,.2\n\tkrandomfast randomh 0,1,3\n\n\tkrandom2 randomh 0,1,10\n\tkftb
+    = (krandom < .33 ? 2 : 3)\n\tkbass = (krandom < .5 ? 6.00 : 6.03)\n\tif ((krandom
+    > .66) && !(krandom < .33)) then\n\t\tkftb = 4\n\t\tkbass = 5.05\n\t\tendif\n\t\t\n\tif
+    ((krandomfast > .9)) then\n\tktrigger4 metro 6\n\tkBassdur *= .5\n\tkbass +=
+    1\n\tendif\n\t\n\t\n\tif ((krandomfast < .05)) then\n\t\tktrigger5 metro 18\n\t\tksnareDur
+    = .1\n\t\tendif\n\tif (krandomfast > .05) then\n\t\tktrigger5 metro 1.5\n\t\tksnareDur
+    = .2\t\n\n\tendif\n\t\n\t\n\tklfo lfo .7, .2\n\tkspectral lfo 20, .1\n\n\t\n;                                              
+    i     start  dur     amp oct car f   rvbam  hpfreq spec   dly\n\tschedkwhen \tktrigger,  
+    0,        0,       2,      0,   kdur,    .6, 0, 1, kftb, .1,   300,kspectral,
+    .4\n\tschedkwhen \tktrigger2,  0,        0,       2,      0,   kdur * 2, .5,
+    2, 1, kftb, .1,   300,0,         .2\n\tschedkwhen \tktrigger4,  0,        0,      
+    3,      0,   kBassdur + klfo + .5, .5,kbass, 1\n\tschedkwhen \tktrigger5,  0,       
+    0,       4,      0,  ksnareDur, .5\n\tif (krandom2 > .7) then\n\t\tschedkwhen
+    \tktrigger3,  0,        0,       2,      0,   kdur * .05, 0, 4, 1, 4, .7, 4000,
+    kspectral * 2,.2\n\tendif\n\tendin\n\n\ninstr 2\n\tiamp = ampdbfs(p4)  * .1 
+    \n\t\n\tiscale = iamp * .1      ; scale the amp at initialization\n\tkrvbadd
+    lfo .5, .1\n\tkrvbam = p8 + krvbadd\n\tipchndx\trandom\t0,13     \n\tipch\t\ttable\tipchndx,
+    p7+i(gkscale)\n\taenv\t\texpseg\t.5, (p3), .001\t\n\tkfmenv    linen 1, .01,
+    .05, 0\n\tkping expseg .5, p3/10, .001\n\tkdly = p11\n\t\n\n\ta1 foscil iamp,
+    cpspch(ipch + p5)  + (kping * 200), p6,1,1, 1\n\ta2 pluck iamp, cpspch(ipch +
+    p5) + (kping * 200),cpspch(ipch + p5), 1, 3\n\ta3 pluck iamp, cpspch(ipch/2 +
+    p5) + (kping * 500), cpspch(ipch/2 + p5), 1, 3\n\ta2 = (a2%(a3 *kping)) * 1.5\n\tafin
+    = a2 + a1\n\tafin buthp afin, p9\n\tklfo random 0, 50\n\tgadlyL = gadlyL+gafbL\n\tgadlyR
+    = gadlyR + gafbR\n\t\n\tafin = afin * aenv\n\tfsig pvsanal afin, 1024, 256, 1024,1\n\tfshift
+    pvshift \tfsig, klfo * p10, 0\n\taout pvsynth fshift\n\ta1,a2 pan2 aout, random(.1,.9)\n\tvincr
+    garvbL + gadlyL, a1 *  krvbam  \n\tvincr garvbR + gadlyR, a2 * krvbam\n\tvincr
+    gadlyR, a1 * kdly\n\tvincr gadlyL, a2 * kdly\n\n\t   \n\touts a1, a2\n\nendin\n\ninstr
+    3\niamp = ampdbfs(p4)  * .1  \n\t\n\nkpch = p5\nkcps = cpspch(kpch)\naenv expseg
+    .5, p3, .001\n\nkfilop lfo 2000, .05\nkping expseg .5, p3/20, .001\nkfilenv linen
+    500 + abs(kfilop),.05, p3/5, p3/5\nklfo lfo .1, 3\n\n\nafm foscili iamp, kcps
+    + (kping * 400), p6, .1+kping,.1,2 \n\n\nafm = afm * aenv * .5\nafm = chebyshevpoly(afm,
+    kping * 5, kcps,klfo) * .05\nafm = chebyshevpoly(afm, klfo, kcps,klfo) * .1\nafm
+    = afm + abs(klfo)\nafm clip afm, 2, .8\nafm = afm * aenv *.3\nafm butlp afm,kfilenv
+    +(abs(kfilop) * .1)\n\nouts afm,afm\n\nendin\n\n\ninstr 4\niamp = ampdbfs(p4)
+    * .1\n\nkenv linen 1,0, p3, .1\nkenv2 linen 1000,.01,p3/4,.01\nkenv3 linen 20,
+    .1, p3/4,.01\nkenv4 linen 2, .01, p3/2, .1\nkenv5 linen 15000, p3/2,p3/2,1\nkrand
+    randomh 100, 2000, 50\n\nanoise noise iamp, 0\nafm foscil iamp, 100 + krand,
+    3 + kenv4,2,2,1\nafm2 foscil iamp, 400 +  krand, 3 + kenv4,2,2,1\nanoise *= afm
+    * 100 * afm2\nanoise += (afm / (abs(afm2) + 4))\nanoise buthp anoise, 2000 +
+    krand \nanoise *= kenv\nanoise butlp anoise, 20000 - kenv5\nanoiseL, anoiseR
+    freeverb anoise, anoise, .5, .35, sr, 0\nanoiseL alpass anoiseL, 5, .1\nanoiseR
+    alpass anoiseR, 5,.1\n\nanoiseL += anoise * .8\nanoiseR += anoise * .8\n\n;delay
+    send\n\nvincr gadlyL, anoiseL * .2\nvincr gadlyR, anoiseR * .2\nouts anoiseL,anoiseR\nendin\n\n\n\n\n\ninstr
+    Reverb\nkrvbadd lfo .5, .1\nktime = .5 + abs(krvbadd)\ndenorm garvbL\nareverb
+    reverb garvbL, ktime\nareverb2 reverb garvbR, ktime * 1.3\nareverb2 delay areverb2,
+    .1\nouts areverb,areverb2\nclear garvbL\nclear garvbR\nendin\n\n\n\n\n\ninstr
+    Delay1 \n    ifeedback = 0.3\n    ideltime = 0.5   \n\n   gadlyL = gadlyL + gafbL\n  
+    gadlyR = gadlyR + gafbR\n   \n\tgadlyL buthp gadlyL, 500\n\tgadlyR buthp gadlyR,
+    500\n\tgadlyL butlp gadlyL, 5000\n\tgadlyR butlp gadlyR, 5000\n   gadlyL delay
+    gadlyL, ideltime + .5\n   gafbL = (gafbL + gadlyL) * ifeedback\n   gadlyR delay
+    gadlyR, ideltime\n   gafbR = (gafbR + gadlyR) * ifeedback\n   \n   \n   \n\n   
+    outs gadlyL, gadlyR\n    clear gadlyL, gadlyR\n  \nendin\ninstr Delay2\n ;multiple
+    delay times, this one with comb\n \tifeedback = .2\n    ideltime = 0.3 \n   
+    aosc = .005\n\n\n   gadlyL = gadlyL + gafbL\n   gadlyL delay gadlyL, ideltime\n  
+    gadlyR = gadlyR + gafbR\n   gadlyR delay gadlyR, ideltime  + .3\n   \tgadlyL
+    buthp gadlyL, 500\n\tgadlyR buthp gadlyR, 500\n  \n  \n  gadlyL flanger gadlyL,
+    aosc, .1\n  gadlyR flanger gadlyR, aosc, .1\n\n    gafbL = gadlyL * ifeedback\n   
+    gafbR = gadlyR * ifeedback\n    \n \n   \n\n    outs gadlyL, gadlyR\n    clear
+    gadlyL, gadlyR\n  \nendin\n\n \n</CsInstruments>\n<CsScore>\n; number  time  
+    size  GEN  p1\nf   1         0       4096\t10\t 1\nf   2          0      64     
+    -2 \t7 \t7.03 \t7.05 \t7.07 \t7.10 \t8\t8.03 \t8.05 \t8.07 \t8.10 \t9\t\t\t;PENTATONIC
+    SCALE - 2 OCTAVES\nf   3          0      64      -2 \t7.03 \t7.07 \t7.10 \t8
+    \t8.03 \t8.07 \t8.09 \t8.11 \t9 \t9.03\t9.07 9.09 9.10\t\nf   4          0     
+    64      -2 6.00 6.07 7.00 7.07 8.00 8.07 9 9.07 10 6.00 7.00 8.00 9.00\nf   5         
+    0      64      -2 6.05, 6.05, 7, 7.05, 7.09, 8.00, 8.03, 8.05, 8.09, 9.00, 9.03,
+    9.05, 9.09\n;WHO\t; use GEN10 to compute a sine wave\n\n;ins strt dur  amp  
+    freq      attack    release\ni 10\t 0\t 3600\t\t;GUI\ni 1 0 3600\ni \"Reverb\"
+    0 3600\ni \"Delay1\" 0 3600\ni \"Delay2\" 0 3600\n\ne ; indicates the end of
+    the score\n</CsScore>\n</CsoundSynthesizer>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<bsbPanel>\n
+    <label>Widgets</label>\n <objectName/>\n <x>514</x>\n <y>322</y>\n <width>413</width>\n
+    <height>431</height>\n <visible>true</visible>\n <uuid/>\n <bgcolor mode=\"background\">\n 
+    <r>7</r>\n  <g>95</g>\n  <b>162</b>\n </bgcolor>\n <bsbObject version=\"2\" type=\"BSBLabel\">\n 
+    <objectName/>\n  <x>14</x>\n  <y>12</y>\n  <width>100</width>\n  <height>29</height>\n 
+    <uuid>{a6fa6d02-14cc-4f0c-b2c3-5e3da73375d3}</uuid>\n  <visible>true</visible>\n 
+    <midichan>0</midichan>\n  <midicc>-3</midicc>\n  <description/>\n  <label>Toot
+    4</label>\n  <alignment>left</alignment>\n  <valignment>top</valignment>\n  <font>DejaVu
+    Sans</font>\n  <fontsize>18</fontsize>\n  <precision>3</precision>\n  <color>\n  
+    <r>241</r>\n   <g>241</g>\n   <b>241</b>\n  </color>\n  <bgcolor mode=\"nobackground\">\n  
+    <r>255</r>\n   <g>255</g>\n   <b>255</b>\n  </bgcolor>\n  <bordermode>noborder</bordermode>\n 
+    <borderradius>1</borderradius>\n  <borderwidth>0</borderwidth>\n </bsbObject>\n
+    <bsbObject version=\"2\" type=\"BSBLabel\">\n  <objectName/>\n  <x>14</x>\n 
+    <y>43</y>\n  <width>365</width>\n  <height>114</height>\n  <uuid>{80a23d3c-a09d-4c5a-a02f-838a51099125}</uuid>\n 
+    <visible>true</visible>\n  <midichan>0</midichan>\n  <midicc>-3</midicc>\n  <description/>\n 
+    <label>Next we'll animate the basic sound by mixing it with two slightly de-tuned
+    copies of itself. We'll employ Csound's cpspch value converter which will allow
+    us to specify the pitches by octave and pitch-class rather than by frequency,
+    and we'll use the ampdbfs converter to specify loudness in dB FS rather than
+    linearly.</label>\n  <alignment>left</alignment>\n  <valignment>top</valignment>\n 
+    <font>DejaVu Sans</font>\n  <fontsize>12</fontsize>\n  <precision>3</precision>\n 
+    <color>\n   <r>241</r>\n   <g>241</g>\n   <b>241</b>\n  </color>\n  <bgcolor
+    mode=\"nobackground\">\n   <r>255</r>\n   <g>255</g>\n   <b>255</b>\n  </bgcolor>\n 
+    <bordermode>noborder</bordermode>\n  <borderradius>1</borderradius>\n  <borderwidth>0</borderwidth>\n
+    </bsbObject>\n <bsbObject version=\"2\" type=\"BSBScope\">\n  <objectName/>\n 
+    <x>50</x>\n  <y>276</y>\n  <width>292</width>\n  <height>96</height>\n  <uuid>{2075a23a-bf65-471c-a1c4-f675ed4b806c}</uuid>\n 
+    <visible>true</visible>\n  <midichan>0</midichan>\n  <midicc>-3</midicc>\n  <description/>\n 
+    <value>-255.00000000</value>\n  <type>scope</type>\n  <zoomx>2.00000000</zoomx>\n 
+    <zoomy>1.00000000</zoomy>\n  <dispx>1.00000000</dispx>\n  <dispy>1.00000000</dispy>\n 
+    <mode>0.00000000</mode>\n  <triggermode>NoTrigger</triggermode>\n </bsbObject>\n
+    <bsbObject version=\"2\" type=\"BSBLabel\">\n  <objectName/>\n  <x>14</x>\n 
+    <y>162</y>\n  <width>365</width>\n  <height>102</height>\n  <uuid>{94118d9a-d6aa-485c-81ac-b5148a74545b}</uuid>\n 
+    <visible>true</visible>\n  <midichan>0</midichan>\n  <midicc>-3</midicc>\n  <description/>\n 
+    <label>Since we are adding the outputs of three oscillators, each with the same
+    amplitude envelope, we'll scale the amplitude before we mix them. Both iscale
+    and inote are arbitrary names to make the design a bit easier to read. Each is
+    an i-rate variable, evaluated when the instrument is initialized.</label>\n 
+    <alignment>left</alignment>\n  <valignment>top</valignment>\n  <font>DejaVu Sans</font>\n 
+    <fontsize>12</fontsize>\n  <precision>3</precision>\n  <color>\n   <r>241</r>\n  
+    <g>241</g>\n   <b>241</b>\n  </color>\n  <bgcolor mode=\"nobackground\">\n  
+    <r>255</r>\n   <g>255</g>\n   <b>255</b>\n  </bgcolor>\n  <bordermode>noborder</bordermode>\n 
+    <borderradius>1</borderradius>\n  <borderwidth>0</borderwidth>\n </bsbObject>\n</bsbPanel>\n<bsbPresets>\n</bsbPresets>\n"
+  _csoundFileName: Generative.csd
+  _csoundAsset: {fileID: 102900000, guid: 16f732eb0c79e415a923f6d9aa36273c, type: 3}
+  _channels: []
+  _availableAudioChannels: []
+  _audioChannelsBufferSize: 32
+  _drawCsoundString: 0
+  _drawTestScore: 0
+  _drawSettings: 0
+  _drawChannels: 0
+  _drawAudioChannels: 0
+  _drawPresets: 0
+  _drawPresetsLoad: 0
+  _drawPresetsSave: 0
+  _drawPresetsImport: 0
+  _showRuntimeEnvironmentPath: 0
+  _currentPreset: 
+  _currentPresetSaveFolder: 
+  _currentPresetLoadFolder: 
+  webGLAssetsList: []

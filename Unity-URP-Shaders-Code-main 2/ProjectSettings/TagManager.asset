@@ -21,6 +21,10 @@ TagManager:
   - DistortionCollider
   - Notification2
   - Notification3
+  - Pigeon
+  - GravRepel
+  - GoalCollide
+  - Goal
   layers:
   - Default
   - TransparentFX
