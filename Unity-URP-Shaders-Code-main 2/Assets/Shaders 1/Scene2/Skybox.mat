@@ -41,7 +41,7 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _blend: 1
-    - _offset: 0.00019999992
+    - _offset: 1.1177403
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

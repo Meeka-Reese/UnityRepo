@@ -96,6 +96,34 @@ MonoBehaviour:
   saturation:
     m_OverrideState: 1
     m_Value: 20
+--- !u!114 &-1946521782038629300
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb959e7fa307175489095d1c9d71451f, type: 3}
+  m_Name: OutlineVolumeSetting
+  m_EditorClassIdentifier: 
+  active: 1
+  outlineSize:
+    m_OverrideState: 1
+    m_Value: 2
+  outlineColor:
+    m_OverrideState: 1
+    m_Value: {r: 0, g: 0, b: 0, a: 1}
+  depthThreshold:
+    m_OverrideState: 0
+    m_Value: 10
+  normalThreshold:
+    m_OverrideState: 0
+    m_Value: 0.7
+  seeThroughWall:
+    m_OverrideState: 0
+    m_Value: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,8 +141,8 @@ MonoBehaviour:
   - {fileID: -8970915713703856493}
   - {fileID: -5181779991915692866}
   - {fileID: -4125929011889868585}
-  - {fileID: 5397812534587759227}
   - {fileID: 2699964448989811209}
+  - {fileID: -1946521782038629300}
 --- !u!114 &849379129802519247
 MonoBehaviour:
   m_ObjectHideFlags: 3

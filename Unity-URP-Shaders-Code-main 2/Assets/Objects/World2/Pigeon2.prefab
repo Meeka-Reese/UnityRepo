@@ -128,8 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac3d25f23e65e44ea85e797f61e6f996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  MaxDistance: 500
+  ClosestPigeon: {fileID: 0}
+  speed: 20
+  MaxDistance: 50
+  PigeonGroupNum: 0
 --- !u!136 &-4173850923016539164
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -149,7 +151,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}

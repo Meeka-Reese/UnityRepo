@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: URP_OutlinePP
-  m_Shader: {fileID: 4800000, guid: 90a297657ff34aa41b9a0d66b6e7b930, type: 3}
+  m_Name: Rail
+  m_Shader: {fileID: 4800000, guid: 3053485c8380242ea9b0474326fd61ab, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -22,14 +22,13 @@ Material:
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 48dbfff0fe3ee42c9b53966d8358a380, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
-    m_Floats:
-    - _DepthThreshold: 10
-    - _NormalThreshold: 0.7
-    - _OutlineSize: 2
-    - _SeeThroughWall: 0
-    m_Colors:
-    - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Floats: []
+    m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1
